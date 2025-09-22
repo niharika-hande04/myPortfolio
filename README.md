@@ -28,7 +28,7 @@ This is my **interactive front-end portfolio**, showcasing my skills, projects, 
    - Technologies: Python, Pandas, scikit-learn
 
 ## Live Demo
-[View Live Portfolio](https://your-username.github.io/portfolio-website/)
+[View Live Portfolio](https://github.com/niharika-hande04/myPortfolio/tree/main/output)
 
 ## Installation / Usage
 1. Clone the repository:
