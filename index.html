@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Portfolio — Niharika Hande</title>
+  <meta name="description" content="Interactive front-end portfolio. Includes projects, skills, contact and nice reveals." />
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">NH</div>
+          <div>
+            <div style="font-weight:700">Niharika Hande</div>
+            <div style="font-size:12px;color:var(--muted)">Frontend Developer</div>
+          </div>
+        </div>
+
+        <nav style="display:flex;gap:.5rem;align-items:center">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="#certificates">Certificates</a>
+        </nav>
+
+        <div class="tools">
+          <button id="theme-toggle" class="btn" aria-label="Toggle theme">🌙</button>
+          <a class="btn" href="#projects">View projects</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card reveal">
+          <h1>Hi — I’m <span style="color:var(--accent)">Niharika Hande</span></h1>
+          <p class="lead">I build accessible and beautiful front-end projects. I like clean UI, subtle interactions and shipping fast prototypes.</p>
+          <p style="margin-top:1rem">Specialties: <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Python</strong> responsive layouts.</p>
+          <div style="margin-top:1rem;display:flex;gap:.6rem">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn" href="#contact">Hire me</a>
+            <a class="btn resume" href="files/Niharika_Hande_Resume.pdf" download>Download Niharika_Hande_Resume</a>
+          </div>
+        </div>
+
+        <aside class="avatar reveal hero-card" aria-hidden="true">
+          <img src="images/Niharika1.jpg" alt="Niharika Hande"class="profile-photo">
+           
+        </aside>
+      </section>
+
+      <section id="about" class="reveal">
+        <h2 class="section-title">About</h2>
+        <p>Hello, I’m Niharika Hande. I’m in my final year of a B.E. in Information Science and Engineering at Sri Siddhartha Institute of Technology, Tumakuru, Karnataka. </p>
+        <p>I’m highly organized, self-motivated, and eager to grow as a developer. I’m seeking an internship where I can apply my skills in machine learning and web development, contribute to meaningful projects, and continue professional growth.</p>
+      </section>
+
+      <section id="skills" class="reveal">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <!-- Skills get rendered by JS -->
+        </div>
+      </section>
+
+      <section id="projects" class="reveal">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <!-- Project cards injected here -->
+        </div>
+      </section>
+
+      <section id="contact" class="reveal">
+        <h2 class="section-title">Contact Me</h2>
+        
+          <form action="https://formspree.io/f/xpwjvdoo" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+          <div style="display:flex;gap:.5rem">
+            <button class="btn" type="submit">Send message</button>
+            <button class="btn" type="reset">Reset</button>
+          </div>
+        </form>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/niharika-hande-1218162bb/" target="_blank" aria-label="linkedin">
+            <i class="fab fa-linkedin"></i>
+          </a>
+            <a href="https://www.github.com/niharika-hande04" target="_blank" aria-label="github">
+            <i class="fab fa-github"></i>
+          </a>
+            <a href="https://www.instagram.com/_niharika_hande_/" target="_blank" aria-label="instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="tel:+91 9480191976" target="_blank" aria-label="phone">
+            <i class="fas fa-phone"></i> +91 9480191976
+          </a>
+        </div>
+      </section>
+      <section id="certificates" class="reveal">
+        <h2 class="section-title">Certificates</h2>
+        <div class="certificates-grid">
+          <a class="btn" href="files/Privacy and Security in Online Social Media.pdf" download>Privacy and Security</a>
+          <a class="btn" href="files/Data analysis with python (FCC).png" download>Data analysis FreeCode camp</a>
+          <a class="btn" href="files/Artificial intellegence foundation.pdf" download>AI foundation Infosys springboard</a>
+
+
+        </div>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+        <div>© <span id="year"></span> Niharika Hande • Built with ♥</div>
+        <div style="color:var(--muted);font-size:13px"> This is my current portfolio and all the above details provided above are true</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem">
+        <div>
+          <h3 id="modal-title">Project title</h3>
+          <div id="modal-sub" style="color:var(--muted);font-size:13px">Subtitle</div>
+        </div>
+        <div>
+          <button class="close" id="modal-close" aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div id="modal-body" style="margin-top:1rem">Full project details go here.</div>
+      <div id="modal-links" style="margin-top:1rem;display:flex;gap:.5rem"></div>
+    </div>
+  </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
