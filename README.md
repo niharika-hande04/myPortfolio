@@ -34,4 +34,4 @@ This is my **interactive front-end portfolio**, showcasing my skills, projects, 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/portfolio-website.git
+https://github.com/niharika-hande04/myPortfolio
