@@ -1,4 +1,4 @@
-const YOUR_EMAIL = 'your.email@example.com'; // change before shipping
+const YOUR_EMAIL = 'niharikahande04@gmail.com'; 
 
 const skills = [
   {name:'HTML and CSS', level:90},
@@ -8,9 +8,9 @@ const skills = [
 ];
 
 const projects = [
-  { id:1, title:'Portfolio Website', subtitle:'CSS / JS',
+  { id:1, title:'Portfolio Website', subtitle:'Interactive front-end portfolio showcasing projects, skills, and certificates.',
     description:'A responsive portfolio to show projects and contact. Built with semantic HTML, CSS and JS. Includes modals and smooth-scroll.',
-    tags:['HTML','CSS','JS'], link:'https://github.com/niharika-hande04/my-portfolio',
+    tags:['HTML','CSS','JS'], link:'https://github.com/niharika-hande04/myPortfolio',
   img:'images/portfolio.jpg' },
   { id:2, title:'Student attentive analysis',
     subtitle:'Real-time classroom attention monitoring with computer vision',
