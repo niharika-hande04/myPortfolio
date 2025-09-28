@@ -1,84 +1,86 @@
-Niharika Hande — Portfolio Website
-Overview
+# Niharika Hande — Portfolio Website
+# Overview
 
-This is my interactive front-end portfolio, showcasing my skills, projects, and certificates. It includes smooth animations, modals for project details, a responsive layout, and a dedicated profile modal when clicking the logo.
+This is my **interactive front-end portfolio**, showcasing my skills, projects, and certificates. It includes smooth animations, modals for project details, a responsive layout, and a dedicated profile modal when clicking the logo.
 
-Built with HTML, CSS, and JavaScript
+Built with **HTML, CSS, and JavaScript**
 
-Fully responsive for mobile and desktop
+Fully **responsive** for mobile and desktop
 
-Includes images, PDFs, and interactive features
+Includes **images, PDFs, and interactive features**
 
-Dark/Light theme toggle
+**Dark/Light theme toggle**
 
-Downloadable resume via NH logo modal
+**Downloadable resume** via NH logo modal
 
-Features
+## Features
 
-About section: Introduction and personal details
+**About section**: Introduction and personal details
 
-Skills section: Animated progress bars displaying skill levels
+**Skills section:** Animated progress bars displaying skill levels
 
-Projects section: Dynamic cards with modals for detailed project info
+**Projects section:** Dynamic cards with modals for detailed project info
 
-Profile modal: Click the NH logo to view profile info, contact, and download resume
+**Profile modal:** Click the NH logo to view profile info, contact, and download resume
 
-Contact form: Integrated with Formspree
+**Contact form:** Integrated with Formspree
  for easy messaging
 
-Certificates section: Downloadable PDFs
+**Certificates section**: Downloadable PDFs
 
-Dark/Light theme toggle
+**Dark/Light theme toggle**
 
-Social links: LinkedIn, GitHub, Instagram, Email, Phone
+**Social links:** LinkedIn, GitHub, Instagram, Email, Phone
 
-Projects
+## Projects
 
-Portfolio Website
+**1. Portfolio Website**
+- Responsive front-end portfolio with smooth-scroll, reveal animations, and modals
 
-Responsive front-end portfolio with smooth-scroll, reveal animations, and modals
+- Technologies: HTML, CSS, JavaScript
+  
+**2. Student Attentive Analysis**
 
-Technologies: HTML, CSS, JavaScript
+- Real-time classroom attention monitoring using computer vision
 
-Student Attentive Analysis
+- Applies facial detection and eye-gaze tracking to measure attentiveness
 
-Real-time classroom attention monitoring using computer vision
+- Technologies: Python, OpenCV, PyTorch
 
-Applies facial detection and eye-gaze tracking to measure attentiveness
+**3. Movie Recommendation System**
 
-Technologies: Python, OpenCV, PyTorch
+- Suggests top movies based on IMDb ratings and genre/year filters
 
-Movie Recommendation System
+- Fast, no-login-required recommendation system
 
-Suggests top movies based on IMDb ratings and genre/year filters
+- Technologies: Python, Pandas, scikit-learn
 
-Fast, no-login-required recommendation system
+**NH Logo Modal**
 
-Technologies: Python, Pandas, scikit-learn
+- Clicking the NH logo displays a modal with:
 
-NH Logo Modal
+  - Profile picture
 
-Clicking the NH logo displays a modal with:
+  - Age, email, phone, education
 
-Profile picture
+  - Downloadable resume
 
-Age, email, phone, education
+ **Live Demo**
 
-Downloadable resume
+[View Live Portfolio]()
 
-Live Demo
+**Installation / Usage**
 
-View Live Portfolio
+1. Clone the repository:
 
-Installation / Usage
-
-Clone the repository:
-
-git clone https://github.com/niharika-hande04/myPortfolio.git
+   git clone https://github.com/niharika-hande04/myPortfolio.git
 
 
-Open index.html in your browser.
+2. Open [index.html] in your browser.
 
-Explore all sections, click project Details buttons for modals, and click the NH logo to view profile and download resume.
+3.  Explore all sections:
 
-Toggle Dark/Light theme using the moon/sun button.
+  - Click project Details buttons for modals
+  - Click the NH logo to view profile and download resume
+
+4. Toggle Dark/Light theme using the moon/sun button
