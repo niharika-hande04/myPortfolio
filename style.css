@@ -229,39 +229,3 @@ footer { padding: 2rem 0; color: var(--muted); }
 }
 .social-links a:hover { color: #06b6d4; transform: scale(1.1); }
 .social-links a i { vertical-align: middle; }
-
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  min-width: 0; /* allow shrinking on small screens */
-}
-
-.logo {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;  /* prevent it from collapsing */
-  flex-shrink: 0;   /* never shrink */
-}
-
-
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: repeat(1,1fr); }
-  .nav { padding: .5rem; }
-
-  /* Add this */
-  .nav nav {
-    display: none; /* optional: hide menu links for small screen, use hamburger later */
-  }
-}
-
-
-
-@media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
