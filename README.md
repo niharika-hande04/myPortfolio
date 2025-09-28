@@ -67,7 +67,7 @@ Includes **images, PDFs, and interactive features**
 
  **Live Demo**
 
-[View Live Portfolio]()
+[View Live Portfolio](https://github.com/niharika-hande04/myPortfolio/tree/main/output)
 
 **Installation / Usage**
 
