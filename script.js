@@ -163,6 +163,24 @@ logoClick.addEventListener('click', ()=>{
   backdrop.setAttribute('aria-hidden','false');
 });
 
+const hamburger = document.getElementById('hamburger');
+const mainNav = document.getElementById('main-nav');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = mainNav.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+// Close menu when clicking a nav link (mobile)
+mainNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (mainNav.classList.contains('open')) {
+      mainNav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+    }
+  });
+});
+
 // Init
 renderSkills();
 renderProjects();
