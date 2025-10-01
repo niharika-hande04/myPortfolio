@@ -153,8 +153,8 @@ logoClick.addEventListener('click', ()=>{
         <p><strong>Address:</strong> Chamundeshwari Nagara, SiraGate, Tumakuru</p>
         <p><strong>Location:</strong> Karnataka, India</p>
         <p><strong>Languages:</strong> English, Kannada</p>
-        <p><strong>Hobies:</strong> Reading Stories, Travelling, Cooking</p>
-        <p><strong>Area of Intrests:</strong> Machine Learning, AI, CNN, Web Development, Data Analytics</p>
+        <p><strong>Hobbies:</strong> Reading Stories, Travelling, Cooking</p>
+        <p><strong>Area of Interests:</strong> Machine Learning, AI, CNN, Web Development, Data Analytics</p>
       </div>
     </div>
   `;
@@ -184,3 +184,4 @@ mainNav.querySelectorAll('a').forEach(link => {
 // Init
 renderSkills();
 renderProjects();
+
