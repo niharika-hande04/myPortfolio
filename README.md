@@ -75,10 +75,12 @@ Includes **images, PDFs, and interactive features**
 
    git clone https://github.com/niharika-hande04/myPortfolio.git
 
+   Deployment link https://niharika-hande04.github.io/myPortfolio/
 
-2. Open [index.html] in your browser.
 
-3.  Explore all sections:
+3. Open [index.html] in your browser.
+
+4.  Explore all sections:
 
   - Click project Details buttons for modals
   - Click the NH logo to view profile and download resume
