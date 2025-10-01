@@ -67,12 +67,8 @@ nav a {
   border-radius: 8px;
   transition: background 0.3s;
 }
-nav a:hover {
-  background: rgba(0,0,0,0.04);
-}
-[data-theme='dark'] nav a:hover {
-  background: rgba(255,255,255,0.08);
-}
+nav a:hover { background: rgba(0,0,0,0.04); }
+[data-theme='dark'] nav a:hover { background: rgba(255,255,255,0.08); }
 .tools { display: flex; gap: .5rem; align-items: center; }
 .btn {
   border: 0;
@@ -132,9 +128,9 @@ h2.section-title { margin: 0 0 1rem 0; color: var(--text); }
 
 /* Projects */
 .project-title {
-  font-weight: 700; /* makes it bold */
-  font-size: 1.1rem; /* optional: adjust size if needed */
-  margin-bottom: 0.25rem; /* optional spacing */
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
 }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1rem; }
 .card {
@@ -172,21 +168,13 @@ h2.section-title { margin: 0 0 1rem 0; color: var(--text); }
   box-shadow: 0 18px 50px rgba(2,6,23,0.5);
   color: var(--text);
 }
-.modal .close { background: transparent; border: 0; font-size: 1.1rem; cursor: pointer; }
+.modal .close { background: transparent; border: 0; font-size: 1.1rem; cursor: pointer; color: var(--text); }
+[data-theme="dark"] .modal .close { color: #ffffff; }
 
-.modal .close {
-  color: var(--text);  
-  font-size: 1.2rem;
-}
-
-[data-theme="dark"] .modal .close {
-  color: #ffffff;      
-}
-
-/* Profile modal (NH logo click) */
-.profile-card { display: flex; align-items: center; gap: 1rem; }
-.modal-avatar { width: 100px; border-radius: 12px; }
-.profile-info p { margin: .25rem 0; }
+/* Profile modal */
+.profile-card { display: flex; align-items: flex-start; gap: 20px;text-align: left; }
+.modal-avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
+.profile-info p { margin: .5px 0; }
 
 /* Contact */
 form { display: grid; gap: .75rem; }
@@ -230,12 +218,20 @@ footer { padding: 2rem 0; color: var(--muted); }
 .social-links a:hover { color: #06b6d4; transform: scale(1.1); }
 .social-links a i { vertical-align: middle; }
 
-
-/* Hide nav links on mobile by default */
+/* Mobile nav */
+#hamburger { display: none; }
 @media (max-width: 900px) {
-  nav {
+  #hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text);
+  }
+  nav#main-nav {
     position: fixed;
-    top: 60px; /* below header */
+    top: 60px;
     right: 0;
     background: var(--card);
     width: 70%;
@@ -248,39 +244,75 @@ footer { padding: 2rem 0; color: var(--muted); }
     flex-direction: column;
     gap: 1rem;
     z-index: 50;
+    display: flex;
+    gap: .5rem;
+    align-items: center; 
+    justify-content: flex-start;
   }
-  nav.open {
-    transform: translateX(0);
-  }
-  nav a {
-    padding: 1rem;
-    font-size: 1.2rem;
-  }
-  /* Hamburger button */
-  #hamburger {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: var(--text);
-  }
+  nav#main-nav.open { transform: translateX(0); }
 }
 
-/* Hide hamburger on desktop */
-#hamburger {
-  display: none;
-}
-
-.modal {
-  max-width: 900px;
-  width: 100%;
-  margin: 0 1rem;
-}
-
-@media (max-width: 500px) {
+/* ✅ Mobile Fixes */
+@media (max-width: 768px) {
   .modal {
+    width: 95%;
+    max-height: 85vh;
+    overflow-y: auto;
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 10px;
   }
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  .modal-avatar {
+    margin-bottom: 15px;
+  }
+   .profile-info {
+    width: 100%;                 
+  }
+  #main-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--card);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 220px;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+  #main-nav.open { display: flex; }
+  #main-nav a { padding: 0.5rem 0; font-size: 1rem; }
+  .skills-grid,
+  .projects-grid,
+  .certificates-grid { grid-template-columns: 1fr; gap: 1rem; }
+  /* Certificates grid */
+.certificates-grid {
+  display: flex;
+  flex-wrap: wrap; /* allow items to wrap */
+  gap: 0.5rem;
+}
+
+.certificates-grid a {
+  flex: 1 1 auto; /* let buttons shrink/grow */
+  min-width: 200px; /* optional: minimum width for readability */
+}
+
+/* Mobile-specific fix */
+@media (max-width: 768px) {
+  .certificates-grid {
+    flex-direction: column; /* stack buttons vertically */
+    gap: 0.5rem;
+  }
+  .certificates-grid a {
+    width: 100%; /* full width buttons */
+  }
+}
+
+
+  #logo-click { font-size: 1.8rem; padding: 0.3rem 0.6rem; }
 }
